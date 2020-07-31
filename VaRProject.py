@@ -75,7 +75,7 @@ print()
 
 print("The expected return on TSLA for the worst 5% of cases (CVAR) = " + str(CVaR_95))
 
-# Plotting the normal distribution histogram and adding lines for the CVaR and VaR
+# Plotting the normal distribution histogram and adding lines for the VaR
 plt.hist(norm.rvs(size = 100000, loc = meanLoss, scale = stdLoss), bins = 100)
 plt.axvline(x = Var_5, c='r', label = "VaR, 95% confidence level")
 plt.legend(); plt.show()
